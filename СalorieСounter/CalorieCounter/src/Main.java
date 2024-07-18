@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         StepTracker stepTracker = new StepTracker();
+        Converter converter = new Converter();
         Scanner console = new Scanner(System.in);
         printMenu();
         int userInput = console.nextInt();
@@ -52,13 +53,23 @@ public class Main {
                     }
                     break;
                 case 2:
-                    printMenuMonth();
+                    printMenuConverter();
                     nextUserInput = console.nextInt();
                     while (nextUserInput != 0){
                         switch (nextUserInput){
                             case 1:
+                                System.out.println("Введите номер месяца: ");
+                                monthIndex = console.nextInt();
+                                converter.printResultForMonth(converter.monthResult(stepTracker, monthIndex), monthIndex);
                                 break;
+                            case 2:
+                                converter.printResultForYear(converter.yearResult(stepTracker));
+                                break;
+                            default:
+                                System.out.println("Неизвестная команда.");
                         }
+                        printMenuConverter();
+                        nextUserInput = console.nextInt();
                     }
                     break;
                 default:
@@ -83,9 +94,7 @@ public class Main {
 
     public static void printMenuConverter() {
         System.out.println("0 — для выхода в общее меню");
-        System.out.println("1 — ");
-        System.out.println("2 — ");
-        System.out.println("3 — ");
-        System.out.println("4 — ");
+        System.out.println("1 — посчитать результат за месяц");
+        System.out.println("2 — посчитать результат за год");
     }
 }
