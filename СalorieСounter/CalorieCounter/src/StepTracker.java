@@ -2,6 +2,7 @@ import java.util.HashMap;
 
 public class StepTracker {
     private static HashMap<Integer, MonthData> monthToData = new HashMap<Integer, MonthData>();
+    TrackerService trackerService = new TrackerService();
 
     public StepTracker() {
         for (int i = 0; i < 12; i++) {
@@ -83,7 +84,7 @@ public class StepTracker {
 
         public void getInfoMonth(int indexMonth){
             System.out.println("Месяц " + indexMonth + ":");
-            for (int i = 0; i < 30; i++) {
+            for (int i = 1; i < 31; i++) {
                 getInfoDay(indexMonth-1, i);
             }
         }
