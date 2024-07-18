@@ -30,6 +30,7 @@
 | **Важный эпик 2** |                   |      |
 | - Задача 1      |                   |      |
 | - Задача 1      |                   |      |
+
 ![image](https://github.com/user-attachments/assets/a715da8e-390c-4552-b334-25af66362aba)
 
 Типы задач
