@@ -11,6 +11,7 @@ public class Main {
 
             printMenu();
             userInput = console.nextInt();
+
             switch (userInput) {
                 case 1:
                     System.out.println("Введите номер месяца: ");
@@ -49,7 +50,19 @@ public class Main {
                         printMenuMonth();
                         nextUserInput = console.nextInt();
                     }
+                    break;
                 case 2:
+                    printMenuMonth();
+                    nextUserInput = console.nextInt();
+                    while (nextUserInput != 0){
+                        switch (nextUserInput){
+                            case 1:
+                                break;
+                        }
+                    }
+                    break;
+                default:
+                    System.out.println("Неизвестная команда.");
             }
         }
     }
@@ -69,6 +82,10 @@ public class Main {
     }
 
     public static void printMenuConverter() {
-
+        System.out.println("0 — для выхода в общее меню");
+        System.out.println("1 — ");
+        System.out.println("2 — ");
+        System.out.println("3 — ");
+        System.out.println("4 — ");
     }
 }
