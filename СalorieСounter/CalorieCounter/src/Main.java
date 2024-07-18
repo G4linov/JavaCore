@@ -13,7 +13,11 @@ public class Main {
         }
     }
     public static void printMenu(){
-        System.out.println("0 - для выхода");
+        System.out.println("0 — для выхода");
 
+    }
+
+    public static void printMenuMonth(){
+        System.out.println("0 — для выхода в общее меню");
     }
 }
